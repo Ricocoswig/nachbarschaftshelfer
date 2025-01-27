@@ -1,0 +1,106 @@
+/* Globale Stile */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f0f2f5;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+/* (Sidebar-Styling bleibt im Wesentlichen gleich wie im vorherigen Beispiel) */
+.sidebar {
+    background-color: #007bff;
+    color: white;
+    width: 280px;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+.nav { /* ... */ }
+.nav li a { /* ... */ }
+.nav li a:hover { /* ... */ }
+.nav li a i { /* ... */ }
+.badge { /* ... */ }
+.logout-button { /* ... */ }
+.logout-button:hover { /* ... */ }
+
+/* Inhalt */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 280px;
+    background-color: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.05);
+    overflow-y: auto;
+}
+
+.lead { /* Zusätzlicher Stil für den einleitenden Text */
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.dashboard-widgets {
+    display: flex;
+    flex-wrap: wrap; /* Widgets auf mehrere Zeilen umbrechen */
+    gap: 20px; /* Abstand zwischen den Widgets */
+}
+
+.widget {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1 1 300px; /* Widgets nehmen mindestens 300px Breite ein und füllen den verfügbaren Platz */
+    min-width: 300px; /* verhindert das zu schmale werden */
+}
+
+.widget-header {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.widget-content {
+    /* Inhalt der Widgets */
+}
+
+.widget-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.widget-content li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+.widget-content li i{
+    margin-right: 5px;
+    color: #2ecc71;
+}
+
+/* Responsives Design */
+@media (max-width: 768px) {
+    .sidebar { /* ... */ }
+    .content{ /* ... */ }
+    .dashboard-widgets {
+        flex-direction: column; /* Widgets untereinander auf kleinen Bildschirmen */
+    }
+}
